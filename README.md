@@ -18,13 +18,13 @@ productpage code : `https://github.com/istio/istio/blob/master/samples/bookinfo/
 
 details code : `https://github.com/istio/istio/blob/master/samples/bookinfo/src/details/details.rb`
 
-Discussion
+### Discussion
 
 How did kubernetes help ?
 How is istio different from kubernetes ?
 Where does k8s responsibility end ? Should k8s extend its features to do all that istio does ?
 
-Demerits
+#### Demerits
 
 How to enable tracing ?
 How to enable monitoring to my services ?
@@ -55,7 +55,9 @@ Install Istio
 kubectl apply -f install/kubernetes/istio-demo.yaml
 ```
 
-What it means by installing istio on my k8s cluster ?
+
+
+#### What it means by installing istio on my k8s cluster ?
 
 ```
 kubectl get svc -n istio-system
@@ -130,7 +132,9 @@ There are lot of reasons for not doing 3. Here is few - https://github.com/istio
 Pilot is responsible for configuring routing related rules for service-service communication. eg. re-routing, canary, fault injection, retry, circuit breaker
 Mixer is responsible for configuring policy enforcment for dynamic run time traffic. eg. authentication, apikey verification, analytics
 
-Sample routing configuration
+
+
+#### Sample routing configuration
 
 Talk about Virtualservice and Destinationrule
 
