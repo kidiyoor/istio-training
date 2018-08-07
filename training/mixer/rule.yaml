@@ -1,0 +1,9 @@
+apiVersion: "config.istio.io/v1alpha2"
+kind: rule
+metadata:
+  name: denyrule
+spec:
+  match: destination.labels["app"] == "details" && source.labels["app"]=="productpage" && source.labels["version"] == "v1"
+  actions:
+  - handler: denyadapter.denier
+    instances: [ denyinstanceattributeset.checknothing ]
